@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="icon" href="./public/favicon.ico" />
+    <link rel="stylesheet" href="public/css/master.css">
+
+    <title>Customer</title>
+</head>
+
+<body class="customers">
+    <div class="ui  compact menu">
+        <a href="./index.html"><i class="far fa-arrow-alt-circle-left fa-3x back"></i></a>
+    </div>
+    </div>
+    <div class="ui container centered">
+        <!-- Error message -->
+        <div id="negative" class="ui negative message">
+            <i class="close icon" onclick="cancel('negative')"></i>
+            <div class="header">
+                Low Balance!!
+            </div>
+        </div>
+        <!-- Success message -->
+        <div id="positive" class="ui positive message">
+            <i class="close icon" onclick="cancel('positive')"></i>
+            <div class="header">
+                Success!! The amount has been transfered
+            </div>
+        </div>
+        <!-- button-upload -->
+        <div class="ui buttons choice">
+            <button class="ui green button " onclick="displayForm()">Send Money</button>
+            <div class="or"></div>
+            <button class="ui blue button" onclick="checkBalance()">Check Balance</button>
+        </div>
+        <!--  for check balance -->
+        <div class="ui segment" id="checkBalance">
+            <h1 class="ui center aligned icon header">
+                <img src="./public/images/profile/female.svg">
+                <br> Hey Aniket !
+            </h1>
+            <div>
+                <h3>Current Balance: ₹<span id="total">0</span></h3>
+            </div>
+        </div>
+        <!-- Transfer -->
+        <div class="ui segment" id="transfer">
+            <form class="ui form">
+                <div class="field">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Customer Name</label>
+                            <input id="name" name="to" type="text" placeholder="Enter name here">
+                        </div>
+                        <div class="field">
+                            <label>Amount</label>
+                            <input id="amount" name="amount" type="number" placeholder="Enter Amount">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <button class="ui inverted green button" onclick="sendData()">Transfer</button>
+            <button class="ui inverted secondary button" onclick="cancel('transfer')">Cancel</button>
+        </div>
+        <!-- Customers -->
+        <table class="ui celled striped table customer-data">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/male.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Biplab
+                            </div>
+                        </h4>
+                    </td>
+                    <td>Biplab@gmail.com</td>
+                    <td id="Biplab">50000</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/male.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Anirban
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Anirban@gmail.com</td>
+                    <td id="Anirban" data-label="Job">4000</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/female.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Riya
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Riya@gmail.com</td>
+                    <td id="Riya" data-label="Job">5000</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/female.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Diya
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Diya@gmail.com</td>
+                    <td id="Diya" data-label="Job">10000</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/male.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Arijit
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Arijit@gmail.com</td>
+                    <td id="Arijit" data-label="Job">45000</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/female.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Raya
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Raya@gmail.com</td>
+                    <td id="Raya" data-label="Job">52900</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/male.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Ram
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Ram@gmail.com</td>
+                    <td id="Ram" data-label="Job">2000</td>
+                </tr>
+                <tr>
+                    <td data-label="Name">
+                        <h4 class="ui image header">
+                            <img src="./public/images/profile/male.svg" class="ui mini rounded image">
+                            <div class="content">
+                                Samresh
+                            </div>
+                        </h4>
+                    </td>
+                    <td data-label="Email">Samresh@gmail.com</td>
+                    <td id="Samresh" data-label="Job">1000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer-customer">
+        <p><strong>Made with 💓 by Aniket</strong></p>
+    </footer>
+    <script src="public/js/transfer.js"></script>
+</body>
+
+</html>

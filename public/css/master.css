@@ -1,0 +1,75 @@
+/** @format */
+
+.menu {
+    margin-top: 1vh !important;
+}
+body {
+    background-color: rgb(255, 229, 229);
+}
+
+.footer {
+    background-color: rgb(255, 229, 229) !important;
+    color: black;
+    padding-top: 1vh;
+    font-family: "Montserrat", sans-serif;
+    text-align: center !important;
+}
+
+
+/** @format */
+
+.index .right {
+    text-align: center;
+}
+
+.index .right-section {
+    margin-top: 40vh;
+    margin-left: 2vh;
+}
+
+.index .heading {
+    font-family: "Lora", serif;
+    color: cornflowerblue;
+}
+
+
+/* .index .heading-half {
+    color: blue;
+} */
+
+.index .sub-heading {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+.customers .table {
+    margin-bottom: 5vh !important;
+}
+
+.customers .container {
+    text-align: center !important;
+}
+
+.customers #transfer,
+.customers .message {
+    display: none;
+}
+
+.customers #checkBalance {
+    display: none;
+}
+
+.customers .choice {
+    margin-top: 5vh;
+}
+
+.customers .back {
+    padding: 1vh !important;
+}
+
+.footer-customer {
+    padding: 2vh;
+    text-align: center;
+}
