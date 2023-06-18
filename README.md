@@ -10,3 +10,4 @@ A simple static web banking application to transfer money among friends and fami
 <li> Semantic UI
 </ul>
 
+Please also watch the youtube video - https://youtu.be/XzLEno0Ik7o
